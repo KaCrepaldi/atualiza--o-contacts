@@ -1,6 +1,6 @@
 <?php
      $projeto = "Agenda de Contatos";
-     include('/includes/functions.php');
+     include('./functions.php');
 
 ?>
 <!DOCTYPE html>
