@@ -1,11 +1,12 @@
 <?php
-require_once('./includes/connection.php');
+require_once('./connection.php');
 
 
 $connection->select_db('contacts');
 
 $sql = "SELECT * from contact ORDER BY NAME";
 $result = $connection->query($sql);
+
 
 if($connection->error) 
     echo "erro no acesso a tabela: ". $connection->error;
@@ -19,5 +20,4 @@ foreach($result as $row) {
 
 }
 
-$connectio->close();
-
+$connection->close();

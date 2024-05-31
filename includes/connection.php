@@ -1,13 +1,14 @@
 <?php
 
-$server = "localhost";
 $user = "root";
+$server = "localhost";
 $password = "";
 
 $connection = new mysqli($server, $user, $password);
 
-if($connection->$connetion_error) {
-    die("Falha na conexão: " . $connection->$connetion_error);
+if($connection->connect_error) {
+    die("Falha na conexão: " . $connection->connect_error);
 } else {
-    echo "Conexão realizada <br>";
+    echo "Conexão realizada";
 }
+

@@ -2,7 +2,7 @@
 require_once('./connection.php');
 
 $sql = "CREATE TABLE contact (" .
-    "id INT(6) UNSIGNED AUTO_INCREMENT".
+    "id INT(6) UNSIGNED AUTO_INCREMENT,".
     "name VARCHAR(30) NOT NULL ,".
     "lastname VARCHAR(30),".
     "phone VARCHAR(30) NOT NULL,".
@@ -14,10 +14,11 @@ $sql = "CREATE TABLE contact (" .
 $connection->select_db('contacts');
 
 if($connection->query($sql)) {
-    echo "Tabela contact criada com sucesso.";
+    echo "Tabela contact criada com sucesso. <br>";
 } else {
-    echo "erro na criação da tabela <br>" .$connection->error;
+    echo "erro na criação da tabela: " . $connection->error;
 }
 
 
 $connection->close();
+
