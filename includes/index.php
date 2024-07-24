@@ -1,8 +1,7 @@
-<?php
-     $projeto = "Agenda de Contatos";
-     include('./functions.php');
-     
+<?php $projeto = "agenda de contatos";
+      include('./functions.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,7 +16,7 @@
         <h1><?php echo $projeto ?></h1>
         <h2><?php echo boasVindas("Karla") ?></h2>
         
-      <form action="createContact.php" method="post">
+      <form action="./includes/createContact.php" method="post">
         <input type="text" name="name" placeholder="Nome">
         <input type="text" name="lastname" placeholder="Sobrenome">
         <input type="text" name="email" placeholder="E-mail">
@@ -25,11 +24,11 @@
         <button type="submit">Cadastrar</button>
       </form>
       
-         <h3><?= $projeto ?></h3><!--  shorttag = tag curta -->
+      <h3><?= $projeto ?></h3><!--  shorttag = tag curta -->
 
       <ul>
 
-      <? include('./listContacts.php')?>
+          <? include('.includes/listContacts.php') ?>
       </ul>
     </div>
     

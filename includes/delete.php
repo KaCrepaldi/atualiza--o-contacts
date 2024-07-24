@@ -1,5 +1,5 @@
 <?php
-require_once('./connection.php');
+require_once('./includes/connection.php');
 
 $id = $_GET['id'];
 
@@ -11,5 +11,6 @@ if($connection->query($sql)) {
    
     header("Location: /contacts");
 
+}else {
+
 }
-$connectio->close();

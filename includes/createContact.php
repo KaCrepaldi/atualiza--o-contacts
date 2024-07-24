@@ -15,20 +15,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["name"]);
     $lastname = test_input($_POST["lastname"]);
     $email = test_input($_POST["email"]);
-    $phone= test_input($_POST["name"]);
+    $phone= test_input($_POST["phone"]);
 
-    $value = '"'. $name . '","' . $lastname . '","' . $email .
+    $values = '"'. $name . '","' . $lastname . '","' . $email .
     '","' . $phone . '"';
 
-    $sql= "INSERT INTO contacts (name, lastname, email, phone)
+    $sql= "INSERT INTO contact (name, lastname, email, phone)
     VALUES (" . $values . ")";
 
 if($connection->query($sql)) {
     echo "Contato criado com sucesso. <br>";
-header("Location: /contacts");
+    
+    header("Location: /contacts");
+
 } else {
-    echo "erro na criação da tabela <br>" .$connection->error;
+    echo "Erro na criação do contato : " . $connection->error;
 }
 
-$connectio->close();
+$connection->close();
+
 }

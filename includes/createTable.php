@@ -19,6 +19,8 @@ if($connection->query($sql)) {
     echo "erro na criação da tabela: " . $connection->error;
 }
 
+header("Location: /contacts")
+
 
 $connection->close();
 
