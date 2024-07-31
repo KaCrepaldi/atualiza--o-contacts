@@ -2,13 +2,13 @@
 require_once('./connection.php');
 
 $sql = "CREATE TABLE contact (" .
-    "id INT(6) UNSIGNED AUTO_INCREMENT,".
+    "id INT UNSIGNED AUTO_INCREMENT,".
     "name VARCHAR(30) NOT NULL ,".
     "lastname VARCHAR(30),".
     "phone VARCHAR(30) NOT NULL,".
     "email VARCHAR(30),".
-    "create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,".
-    "primary key(id)".
+    "create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, " .
+    "primary key(id)" .
     ");";
 
 $connection->select_db('contacts');
@@ -19,8 +19,4 @@ if($connection->query($sql)) {
     echo "erro na criação da tabela: " . $connection->error;
 }
 
-header("Location: /contacts")
-
-
 $connection->close();
-

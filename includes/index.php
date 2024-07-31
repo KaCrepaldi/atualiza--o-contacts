@@ -28,7 +28,7 @@
 
       <ul>
 
-          <? include('.includes/listContacts.php') ?>
+          <? include('./listContacts.php') ?>
       </ul>
     </div>
     
