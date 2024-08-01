@@ -1,5 +1,5 @@
-<?php $projeto = "agenda de contatos";
-      include('./functions.php');
+<?php $projeto = "Agenda de contatos";
+      include('./includes/functions.php');
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
         <h1><?php echo $projeto ?></h1>
         <h2><?php echo boasVindas("Karla") ?></h2>
         
-      <form action="./includes/createContact.php" method="post">
+      <form action="./createContact.php" method="post">
         <input type="text" name="name" placeholder="Nome">
         <input type="text" name="lastname" placeholder="Sobrenome">
         <input type="text" name="email" placeholder="E-mail">
