@@ -1,5 +1,5 @@
 <?php $projeto = "Agenda de contatos";
-      include('./includes/functions.php');
+      include('./functions.php');
 ?>
 
 <!DOCTYPE html>
